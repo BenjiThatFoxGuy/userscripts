@@ -1,0 +1,87 @@
+name: Gist Sync Multiple Userscripts
+
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  gist-sync:
+    name: gist-sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Rclone
+        uses: BenjiThatFoxGuy/setup-bclone@v1
+        with:
+          rclone_config: ${{ secrets.RCLONE_CONFIG_B64 }}
+      - name: Copy assets to cloud storage
+        run: |
+          echo "Copying release assets to r2:updates"
+          rclone copy nitter-redirect/ r2:updates --progress --checksum -v
+          rclone copy vrcw.net/ r2:updates --progress --checksum -v
+          rclone copy nexusmods.com/ r2:updates --progress --checksum -v
+      - name: Purge cache
+        uses: nathanvaughn/actions-cloudflare-purge@master
+        with:
+            cf_zone: ${{ secrets.CF_ZONE_ID }}
+            cf_auth: ${{ secrets.CF_API_TOKEN }}
+            hosts: |
+              updates.benjifox.gay
+            files: |
+              https://updates.benjifox.gay/nitter-redirect.user.js
+              https://updates.benjifox.gay/nitter-redirect.meta.js
+              https://updates.benjifox.gay/vrcw.net.user.js
+              https://updates.benjifox.gay/vrcw.net.meta.js
+              https://updates.benjifox.gay/nexusmods.com.user.js
+              https://updates.benjifox.gay/nexusmods.com.meta.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/e0806551d65f884121e26e8774e05d5b
+          gist_title: nitter-redirect.user.js
+          gist_description: Automatically redirect from Twitter/X to Nitter, automatically choosing a Nitter instance based on which one has the current post/user available.
+          github_file: nitter-redirect/nitter-redirect.user.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-2
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/e0806551d65f884121e26e8774e05d5b
+          gist_title: nitter-redirect.meta.js
+          gist_description: Automatically redirect from Twitter/X to Nitter, automatically choosing a Nitter instance based on which one has the current post/user available.
+          github_file: nitter-redirect/nitter-redirect.meta.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-3
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/42c48f58c9b33f36d9cdec3c087ce307
+          gist_title: vrcw.net.user.js
+          gist_description: Converts VRChat world IDs to VRCX deeplinks on vrcw.net
+          github_file: vrcw.net/vrcw.net.user.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-4
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/42c48f58c9b33f36d9cdec3c087ce307
+          gist_title: vrcw.net.meta.js
+          gist_description: Converts VRChat world IDs to VRCX deeplinks on vrcw.net
+          github_file: vrcw.net/vrcw.net.meta.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-5
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/bb455626a00616ccb5d48c5384be7455
+          gist_title: nexusmods.com.user.js
+          gist_description: Automatically clicks the "Slow Download" button on Nexus Mods download pages.
+          github_file: nexusmods.com/nexusmods.com.user.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-6
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/bb455626a00616ccb5d48c5384be7455
+          gist_title: nexusmods.com.meta.js
+          gist_description: Automatically clicks the "Slow Download" button on Nexus Mods download pages.
+          github_file: nexusmods.com/nexusmods.com.meta.js
