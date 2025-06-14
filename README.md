@@ -45,7 +45,6 @@ Saves you clicks and time by automatically pressing the **Slow Download** button
 
 🔗 [**Install Script**](https://raw.githubusercontent.com/BenjiThatFoxGuy/userscripts/main/nexusmods.com/nexusmods.com.user.js)  
 🧠 [**View Metadata**](https://updates.benjifox.gay/nexusmods.com.meta.js)  
-🔄 **Note:** This script uses a custom update server with a fallback to a GitHub Gist URL in case the main server is unavailable.
 
 ---
 
