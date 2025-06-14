@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         e621 Deleted Post Restorer
 // @namespace    au.benjithatfoxguy.e621.net
-// @version      0.2
+// @version      0.3
 // @description  Restore deleted e621/e926 posts from archive if available
 // @author       BenjiThatFoxGuy
 // @match        https://e621.net/posts/*
@@ -126,14 +126,32 @@
                 } else {
                     imgContainer.innerHTML = '';
                 }
-                // Insert the image (as data URL)
-                const img = document.createElement('img');
-                img.alt = `Recovered deleted post #${postId}`;
-                img.id = 'image';
-                img.className = 'fit-window';
-                img.style = 'max-width:100%;display:block;margin:1em auto;';
-                imgContainer.appendChild(img);
-                setImageFromArchive(archiveUrl, img);
+                // Insert the image or video (as data URL)
+                let mediaElement;
+                const videoExts = ['webm', 'mp4', 'mov', 'm4v', 'avi', 'ogg'];
+                if (videoExts.includes(ext)) {
+                    // For video formats, add a note and a button to open in new tab due to CORS
+                    const note = document.createElement('div');
+                    note.style = 'color: #c00; margin: 1em 0; text-align: center; font-weight: bold;';
+                    note.textContent = `${ext.toUpperCase()} cannot be played inline due to e621 limitations. Click the button below to play in a new tab.`;
+                    imgContainer.appendChild(note);
+                    const openBtn = document.createElement('a');
+                    openBtn.className = 'button btn-warn';
+                    openBtn.href = archiveUrl;
+                    openBtn.target = '_blank';
+                    openBtn.rel = 'noopener noreferrer';
+                    openBtn.style = 'display:block;margin:1em auto;text-align:center;max-width:300px;';
+                    openBtn.innerHTML = `<i class="fa-solid fa-right-to-bracket fa-rotate-90"></i> <span>Play ${ext.toUpperCase()} in New Tab</span>`;
+                    imgContainer.appendChild(openBtn);
+                } else {
+                    mediaElement = document.createElement('img');
+                    mediaElement.alt = `Recovered deleted post #${postId}`;
+                    mediaElement.id = 'image';
+                    mediaElement.className = 'fit-window';
+                    mediaElement.style = 'max-width:100%;display:block;margin:1em auto;';
+                    setImageFromArchive(archiveUrl, mediaElement);
+                    imgContainer.appendChild(mediaElement);
+                }
                 // Add download button (direct link, not data URL)
                 let dlDiv = document.getElementById('image-download-link');
                 if (!dlDiv) {
