@@ -38,6 +38,8 @@ jobs:
               https://updates.benjifox.gay/vrcw.net.meta.js
               https://updates.benjifox.gay/nexusmods.com.user.js
               https://updates.benjifox.gay/nexusmods.com.meta.js
+              https://updates.benjifox.gay/e621.net.user.js
+              https://updates.benjifox.gay/e621.net.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
         id: sync
         with:
@@ -86,3 +88,19 @@ jobs:
           gist_title: nexusmods.com.meta.js
           gist_description: Automatically clicks the "Slow Download" button on Nexus Mods download pages.
           github_file: nexusmods.com/nexusmods.com.meta.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-7
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/5a0576874212dc22aabc39c7f24b1c40
+          gist_title: e621.net.user.js
+          gist_description: Restore deleted e621/e926 posts from archive if available
+          github_file: e621.net/e621.net.user.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-8
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/5a0576874212dc22aabc39c7f24b1c40
+          gist_title: e621.net.meta.js
+          gist_description: Restore deleted e621/e926 posts from archive if available
+          github_file: e621.net/e621.net.meta.js
