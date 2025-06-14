@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'README.md'
+      - '.github/**'
+      - 'LICENSE'
+      - 'CHANGELOG.md'
+      - '.gitattributes'
+      - '.gitignore'
   workflow_dispatch:
 
 jobs:
