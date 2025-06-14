@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         e621 Deleted Post Restorer
 // @namespace    au.benjithatfoxguy.e621.net
-// @version      0.1
+// @version      0.2
 // @description  Restore deleted e621/e926 posts from archive if available
 // @author       BenjiThatFoxGuy
 // @match        https://e621.net/posts/*
