@@ -49,6 +49,22 @@ Saves you clicks and time by automatically pressing the **Slow Download** button
 
 ---
 
+### 🦦 e621 Deleted Post Restorer
+
+Restores deleted e621/e926 posts by checking the same distributed archive network that powers [e621 Deleted Post Recovery Tool (e6DPRT)](https://e6dprt.benjifox.gay/). If a post is deleted but present in the archive, the script will display the image and provide a download button, bypassing e621/e926's restrictions.
+
+**Features:**
+- Detects deleted posts on e621 and e926.
+- Retrieves post metadata and reconstructs the archive path.
+- Embeds the image using a data URL to bypass CSP/CORS.
+- Provides a download button for the recovered image.
+- Powered by the same network as [e6DPRT](https://e6dprt.benjifox.gay/).
+
+🔗 [**Install Script**](https://updates.benjifox.gay/e621.net.user.js)  
+🧠 [**View Metadata**](https://updates.benjifox.gay/e621.net.meta.js)
+
+---
+
 ## 🛠️ How to Use
 
 1. Install a userscript manager:
@@ -64,10 +80,40 @@ Saves you clicks and time by automatically pressing the **Slow Download** button
 
 ## 🌍 Custom Update URLs
 
-To ensure reliable updates, all userscripts reference a custom update metadata URL hosted at **[updates.benjifox.gay](https://updates.benjifox.gay)**.  
-If this server is unavailable for any reason, a fallback **GitHub Gist** mirror is used where applicable. This helps maintain functionality even during outages.
+All userscripts in this repository use a custom update metadata URL hosted at **[updates.benjifox.gay](https://updates.benjifox.gay)** for reliable updates. If this server is unavailable, a fallback **GitHub Gist** mirror is used where applicable. This helps maintain functionality even during outages.
 
 ---
 
 ## 📂 Repository Structure
+
+- **`nitter-redirect/`**: Scripts for redirecting Twitter links to Nitter.
+- **`vrcw.net/`**: Scripts for converting VRCW world IDs to VRCX deeplinks.
+- **`nexusmods.com/`**: Scripts for automating downloads on Nexus Mods.
+- **`e621.net/`**: Scripts for restoring deleted e621/e926 posts.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you have a script that you think would fit in well here, or improvements to existing scripts, feel free to fork the repo and submit a pull request.
+
+---
+
+## 📝 Changelog
+
+### v1.0.0
+- Initial release of userscripts collection.
+
+### v1.1.0
+- Added e621 Deleted Post Restorer script.
+- Improved installation instructions.
+
+### v1.2.0
+- Updated metadata and installation links.
+- Fixed minor bugs in scripts.
+
+---
+
+## 📧 Contact
+For questions, suggestions, or to get in touch, please visit my [website](https://benjifox.gay) for up-to-date contact information, including my email address.
 
