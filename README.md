@@ -12,6 +12,7 @@ Below is a summary of the available userscripts. Click any folder link to view f
 - [vrcw.net](./vrcw.net/): Convert VRCW world IDs to VRCX deeplinks. See [vrcw.net/README.md](./vrcw.net/README.md) to learn more.
 - [nexusmods.com](./nexusmods.com/): Auto-click the Slow Download button on Nexus Mods. See [nexusmods.com/README.md](./nexusmods.com/README.md) to learn more.
 - [e621.net](./e621.net/): Restore deleted e621/e926 posts. See [e621.net/README.md](./e621.net/README.md) to learn more.
+- [youtube.com](./youtube.com/): Open Watch Later videos without playlist context. See [youtube.com/README.md](./youtube.com/README.md) to learn more.
 
 ---
 
@@ -38,6 +39,7 @@ All userscripts in this repository use a custom update metadata URL hosted at **
 - [vrcw.net/](./vrcw.net/): Scripts for converting VRCW world IDs to VRCX deeplinks.
 - [nexusmods.com/](./nexusmods.com/): Scripts for automating downloads on Nexus Mods.
 - [e621.net/](./e621.net/): Scripts for restoring deleted e621/e926 posts.
+- [youtube.com/](./youtube.com/): Scripts for improving YouTube Watch Later playlist usability.
 
 ---
 
