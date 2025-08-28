@@ -1,60 +1,64 @@
-# 🦊 Benji's Userscripts Collection
+# ![🦊](https://cdn.benjifox.gay/favicon.ico) Benji's Userscripts Collection: Because the Internet Should Suck Less
 
-Welcome to my cozy den of browser enhancements! This repo hosts various userscripts crafted to improve your online experience with automation, redirection, and convenience in mind.
-
----
-
-## 📜 Available Scripts (Summary)
-
-Below is a summary of the available userscripts. Click any folder link to view full details, features, and install instructions in the corresponding README.
-
-- [nitter-redirect](./nitter-redirect/): Redirect Twitter/X links to Nitter. See [nitter-redirect/README.md](./nitter-redirect/README.md) to learn more.
-- [vrcw.net](./vrcw.net/): Convert VRCW world IDs to VRCX deeplinks. See [vrcw.net/README.md](./vrcw.net/README.md) to learn more.
-- [nexusmods.com](./nexusmods.com/): Auto-click the Slow Download button on Nexus Mods. See [nexusmods.com/README.md](./nexusmods.com/README.md) to learn more.
-- [e621.net](./e621.net/): Restore deleted e621/e926 posts. See [e621.net/README.md](./e621.net/README.md) to learn more.
-- [youtube.com](./youtube.com/): Open Watch Later videos without playlist context. See [youtube.com/README.md](./youtube.com/README.md) to learn more.
+Welcome to my pile of userscripts. These are little browser hacks I made because the web keeps getting worse and I got tired of clicking the same buttons, dodging trackers, or losing stuff to people's hissy fits turned impulsive actions that ruin searchability. If you want things to just work (or at least work a *teeny tiny* bit better), you're in the right place
 
 ---
 
-## 🛠️ How to Use
+## ![🦊](https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_e188afd368f94220be708fefb91a66ea/static/light/1.0) What’s Here?
 
-1. Install a userscript manager:
-   - 🦊 [Violentmonkey](https://violentmonkey.github.io/)
-   - 🐵 [Tampermonkey](https://tampermonkey.net/)
-   - 🐗 [Greasemonkey](https://www.greasespot.net/) (may have compatibility issues)
-2. Visit the relevant subfolder's README for install links and instructions.
-3. Your browser will prompt you to confirm and install. That’s it!
+- **[nitter-redirect](./nitter-redirect/):** Auto-redirects Twitter links to Nitter—no account, no tracking, no ID checks. Show a middle finger to Elon today and never touch Twitter again! UK Citizens rejoice!
 
----
+- **[vrcw.net](./vrcw.net/):** Turns VRCW world IDs into VRCX deep links to make it easier to visit some lesser known worlds. Saves you a few clicks and opening a new tab. I'd say it's worth it
 
-## 🌍 Custom Update URLs
+- **[nexusmods.com](./nexusmods.com/):** Auto-clicks the Slow Download button to save you clicks. Fuck you Nexus, I won't pay for a subscription to download content your users contributed
 
-All userscripts in this repository use a custom update metadata URL hosted at **[updates.benjifox.gay](https://updates.benjifox.gay)** for reliable updates. If this server is unavailable, a fallback **GitHub Gist** mirror is used where applicable. This helps maintain functionality even during outages.
+- **[e621.net](./e621.net/):** Brings back deleted posts. Thank your local datahoarder today. Image only for now sadly - blame e6's restrictive CORS. Hurr durr e621 bad my ass
 
----
+- **[youtube.com](./youtube.com/):** Lets you actually watch stuff from your Watch Later list without being shoved into a playlist binging rabbit hole. Fuck you YouTube—I'm here to watch something not to keep watching
 
-## 📂 Repository Structure
-
-- [nitter-redirect/](./nitter-redirect/): Scripts for redirecting Twitter links to Nitter.
-- [vrcw.net/](./vrcw.net/): Scripts for converting VRCW world IDs to VRCX deeplinks.
-- [nexusmods.com/](./nexusmods.com/): Scripts for automating downloads on Nexus Mods.
-- [e621.net/](./e621.net/): Scripts for restoring deleted e621/e926 posts.
-- [youtube.com/](./youtube.com/): Scripts for improving YouTube Watch Later playlist usability.
+Each folder has its own README with install links, features, and the nitty gritty.
 
 ---
 
-## 🤝 Contributing
+## ![⚠️](https://cdn.betterttv.net/emote/604447c0306b602acc59852a/1x.webp) Heads Up: Stuff Changes 
 
-Contributions are welcome! If you have a script that you think would fit in well here, or improvements to existing scripts, feel free to fork the repo and submit a pull request.
-
----
-
-## 📝 Changelog
-
-See individual subfolder READMEs for script-specific changelogs.
+These scripts might change at any time. Sites break, I fix (or break) things, and sometimes I add new features if I feel like it (especially for sites I use a lot—YouTube will probably get more tweaks, for example). I make these for myself first, but if they help you, awesome
 
 ---
 
-## 📧 Contact
-For questions, suggestions, or to get in touch, please visit my [website](https://benjifox.gay) for up-to-date contact information, including my email address.
+## ![👁️](https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_20c7bda61faa4e07b6a7d523d2bc9172/animated/light/1.0) No Guarantees (Except Not Malware)
 
+I test everything, but there are no promises here except that I’m not shipping malware. (Still, check the code yourself!) I make these for myself, but I hope they help you too. If something breaks or you have an idea, open an issue and I’ll see what I can do.
+
+---
+
+## ![🤔](https://cdn.betterttv.net/emote/5b3409ece50b09705d1c7da1/1x.webp) How Do I Use This?
+
+
+1. Get a userscript manager (Violentmonkey, Tampermonkey, Greasemonkey, whatever—if you don’t have one, how?)
+2. Go to the folder for the script you want. Click the install link. Your browser will probably ask if you’re sure. Say yes.
+3. That’s it. Enjoy a *slightly* less terrible web.
+
+---
+
+## Updates & Mirrors
+
+Scripts update from my r2 bucket @ [updates.benjifox.gay](https://updates.benjifox.gay) - if your userscript manager supports updates that is. If that’s down, I have a plan B and plan C. I try to keep things working even if the internet is on fire
+
+---
+
+## Want to Contribute?
+
+PRs welcome. If you’ve got a script that fits the vibe, or want to improve something, fork away and open a pull request. I’ll look at it when I’m not busy
+
+---
+
+## Changelog
+
+Check the subfolder READMEs for what changed. I don’t keep a master changelog here.
+
+---
+
+## ![👋](https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_2cd8e6cbe057486fa2b4acf59dcbb70e/animated/light/1.0) Need Help?
+
+If you’re stuck, open an issue or check my [website](https://benjifox.gay) for how to reach me. I’m usually around (or at least lurking).
