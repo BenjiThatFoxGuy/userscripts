@@ -31,6 +31,7 @@ jobs:
           rclone copy vrcw.net/ r2:updates --progress --checksum -v
           rclone copy nexusmods.com/ r2:updates --progress --checksum -v
           rclone copy e621.net/ r2:updates --progress --checksum -v
+          rclone copy youtube.com/ r2:updates --progress --checksum -v
       - name: Purge cache
         uses: nathanvaughn/actions-cloudflare-purge@master
         with:
@@ -47,6 +48,8 @@ jobs:
               https://updates.benjifox.gay/nexusmods.com.meta.js
               https://updates.benjifox.gay/e621.net.user.js
               https://updates.benjifox.gay/e621.net.meta.js
+              https://updates.benjifox.gay/youtube.com.user.js
+              https://updates.benjifox.gay/youtube.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
         id: sync
         with:
@@ -111,3 +114,19 @@ jobs:
           gist_title: e621.net.meta.js
           gist_description: Restore deleted e621/e926 posts from archive if available
           github_file: e621.net/e621.net.meta.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-9
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/256aa1295714ee5424e4e20bf155fdcd
+          gist_title: youtube.com.user.js
+          gist_description: Removes list=WL from video links on your Watch Later playlist page so videos open solo and can be ticked off.
+          github_file: youtube.com/youtube.com.user.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-10
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/256aa1295714ee5424e4e20bf155fdcd
+          gist_title: youtube.com.meta.js
+          gist_description: Removes list=WL from video links on your Watch Later playlist page so videos open solo and can be ticked off.
+          github_file: youtube.com/youtube.com.meta.js
