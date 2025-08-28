@@ -50,6 +50,8 @@ jobs:
               https://updates.benjifox.gay/e621.net.meta.js
               https://updates.benjifox.gay/youtube.com.user.js
               https://updates.benjifox.gay/youtube.com.meta.js
+              https://updates.benjifox.gay/twitchemotes.com.user.js
+              https://updates.benjifox.gay/twitchemotes.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
         id: sync
         with:
@@ -130,3 +132,19 @@ jobs:
           gist_title: youtube.com.meta.js
           gist_description: Removes list=WL from video links on your Watch Later playlist page so videos open solo and can be ticked off.
           github_file: youtube.com/youtube.com.meta.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-11
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/22be2e2bf8b0ac8f5340fcaa43e63cdf
+          gist_title: twitchemotes.com.meta.js
+          gist_description: Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this—just respect the owners. Popup begone!
+          github_file: twitchemotes.com/twitchemotes.com.meta.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-12
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/22be2e2bf8b0ac8f5340fcaa43e63cdf
+          gist_title: twitchemotes.com.meta.js
+          gist_description: Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this—just respect the owners. Popup begone!
+          github_file: twitchemotes.com/twitchemotes.com.meta.js

@@ -15,6 +15,7 @@ Welcome to my pile of userscripts. These are little browser hacks I made because
 - **[e621.net](./e621.net/):** Brings back deleted posts. Thank your local datahoarder today. Image only for now sadly - blame e6's restrictive CORS. Hurr durr e621 bad my ass
 
 - **[youtube.com](./youtube.com/):** Lets you actually watch stuff from your Watch Later list without being shoved into a playlist binging rabbit hole. Fuck you YouTube—I'm here to watch something not to keep watching
+- **[twitchemotes.com](./twitchemotes.com/):** Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this—just respect the owners. Popup begone!
 
 Each folder has its own README with install links, features, and the nitty gritty.
 
