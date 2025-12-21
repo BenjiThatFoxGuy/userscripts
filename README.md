@@ -8,6 +8,8 @@ Welcome to my pile of userscripts. These are little browser hacks I made because
 
 - **[nitter-redirect](./nitter-redirect/):** Auto-redirects Twitter links to Nitter—no account, no tracking, no ID checks. Show a middle finger to Elon today and never touch Twitter again! UK Citizens rejoice!
 
+- **[xcancel-redirect](./xcancel-redirect/):** Auto-redirects Twitter links to xCancel—no account, no tracking, no ID checks. An alternative to Nitter using xcancel.com!
+
 - **[vrcw.net](./vrcw.net/):** Turns VRCW world IDs into VRCX deep links to make it easier to visit some lesser known worlds. Saves you a few clicks and opening a new tab. I'd say it's worth it
 
 - **[nexusmods.com](./nexusmods.com/):** Auto-clicks the Slow Download button to save you clicks. Fuck you Nexus, I won't pay for a subscription to download content your users contributed

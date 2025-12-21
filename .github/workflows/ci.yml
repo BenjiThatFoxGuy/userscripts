@@ -28,6 +28,7 @@ jobs:
         run: |
           echo "Copying release assets to r2:updates"
           rclone copy nitter-redirect/ r2:updates --progress --checksum -v
+          rclone copy xcancel-redirect/ r2:updates --progress --checksum -v
           rclone copy vrcw.net/ r2:updates --progress --checksum -v
           rclone copy nexusmods.com/ r2:updates --progress --checksum -v
           rclone copy e621.net/ r2:updates --progress --checksum -v
@@ -43,6 +44,8 @@ jobs:
             files: |
               https://updates.benjifox.gay/nitter-redirect.user.js
               https://updates.benjifox.gay/nitter-redirect.meta.js
+              https://updates.benjifox.gay/xcancel-redirect.user.js
+              https://updates.benjifox.gay/xcancel-redirect.meta.js
               https://updates.benjifox.gay/vrcw.net.user.js
               https://updates.benjifox.gay/vrcw.net.meta.js
               https://updates.benjifox.gay/nexusmods.com.user.js
@@ -69,6 +72,22 @@ jobs:
           gist_title: Redirect to Nitter
           gist_description: Tampermonkey UserScript - Automatically redirect from Twitter/X to Nitter, automatically choosing a Nitter instance based on which one has the current post/user available.
           github_file: nitter-redirect/nitter-redirect.meta.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-xcancel
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/PLACEHOLDER_GIST_URL_FOR_XCANCEL
+          gist_title: Redirect to xCancel
+          gist_description: Tampermonkey UserScript - Automatically redirect from Twitter/X to xCancel (xcancel.com).
+          github_file: xcancel-redirect/xcancel-redirect.user.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-xcancel-2
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/PLACEHOLDER_GIST_URL_FOR_XCANCEL
+          gist_title: Redirect to xCancel
+          gist_description: Tampermonkey UserScript - Automatically redirect from Twitter/X to xCancel (xcancel.com).
+          github_file: xcancel-redirect/xcancel-redirect.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
         id: sync-3
         with:
