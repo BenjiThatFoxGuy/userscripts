@@ -76,7 +76,7 @@ jobs:
         id: sync-xcancel
         with:
           auth: ${{ secrets.GIST_TOKEN }}
-          gist_url: https://gist.github.com/BenjiThatFoxGuy/PLACEHOLDER_GIST_URL_FOR_XCANCEL
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/2a4576d399f9b8ab80c9e4402dfa7f4c
           gist_title: Redirect to xCancel
           gist_description: Tampermonkey UserScript - Automatically redirect from Twitter/X to xCancel (xcancel.com) - a fixed, reliable alternative to Twitter.
           github_file: xcancel-redirect/xcancel-redirect.user.js
@@ -84,7 +84,7 @@ jobs:
         id: sync-xcancel-2
         with:
           auth: ${{ secrets.GIST_TOKEN }}
-          gist_url: https://gist.github.com/BenjiThatFoxGuy/PLACEHOLDER_GIST_URL_FOR_XCANCEL
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/2a4576d399f9b8ab80c9e4402dfa7f4c
           gist_title: Redirect to xCancel
           gist_description: Tampermonkey UserScript - Automatically redirect from Twitter/X to xCancel (xcancel.com) - a fixed, reliable alternative to Twitter.
           github_file: xcancel-redirect/xcancel-redirect.meta.js
