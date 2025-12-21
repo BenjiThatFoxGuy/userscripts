@@ -2,7 +2,7 @@
 // @name         Redirect to xCancel
 // @namespace    au.benjithatfoxguy.xcancel
 // @version      1.0
-// @description  Automatically redirect from Twitter/X to xCancel (xcancel.com).
+// @description  Automatically redirect from Twitter/X to xCancel (xcancel.com) - a fixed, reliable alternative to Twitter.
 // @icon         https://xcancel.com/favicon.ico
 // @include      /^https?:\/\/(www\.)?(twitter\.com|x\.com)\/.+$/
 // @run-at       document-start
