@@ -6,6 +6,9 @@
 // @author       BenjiThatFoxGuy
 // @match        https://github.com/*
 // @grant        none
+// @license      MIT
+// @updateURL    https://updates.benjifox.gay/github.com.meta.js
+// @downloadURL  https://updates.benjifox.gay/github.com.user.js
 // ==/UserScript==
 
 (function() {
