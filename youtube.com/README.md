@@ -9,7 +9,7 @@ These scripts might change at any time. Sites break, I fix (or break) things, an
 
 ## ![�️‍🗨️](https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_20c7bda61faa4e07b6a7d523d2bc9172/animated/light/1.0) No Guarantees (Except Not Malware)
 
-I test everything, but there are no promises here except that I’m not shipping malware. (Still, check the code yourself!) I make these for myself, but I hope they help you too. If something breaks or you have an idea, open an issue and I’ll see what I can do.
+I test everything, but there are no promises here except that I'm not shipping malware. (Still, check the code yourself!) I make these for myself, but I hope they help you too. If something breaks or you have an idea, open an issue and I'll see what I can do.
 
 # ▶️ YouTube Watch Later: No Playlist Trap
 
@@ -35,4 +35,4 @@ Removes `list=WL` from video links on your Watch Later playlist page so videos o
 
 ## Why?
 
-Because I’m tired of being forced into a playlist rabbit hole. If YouTube changes things (again), open an issue and I’ll patch it up.
+Because I'm tired of being forced into a playlist rabbit hole. If YouTube changes things (again), open an issue and I'll patch it up.

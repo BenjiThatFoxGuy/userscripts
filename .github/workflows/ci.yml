@@ -33,6 +33,7 @@ jobs:
           rclone copy e621.net/ r2:updates --progress --checksum -v
           rclone copy youtube.com/ r2:updates --progress --checksum -v
           rclone copy twitchemotes.com/ r2:updates --progress --checksum -v
+          rclone copy github.com/ r2:updates --progress --checksum -v
       - name: Purge cache
         uses: nathanvaughn/actions-cloudflare-purge@master
         with:
@@ -53,6 +54,8 @@ jobs:
               https://updates.benjifox.gay/youtube.com.meta.js
               https://updates.benjifox.gay/twitchemotes.com.user.js
               https://updates.benjifox.gay/twitchemotes.com.meta.js
+              https://updates.benjifox.gay/github.com.user.js
+              https://updates.benjifox.gay/github.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
         id: sync
         with:
@@ -149,3 +152,19 @@ jobs:
           gist_title: twitchemotes.com - Unblock Right Click on Images
           gist_description: Tampermonkey UserScript - Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this—just respect the owners. Popup begone!
           github_file: twitchemotes.com/twitchemotes.com.meta.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-13
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/f5e54f2cc96bb8cdd61d4d4c234031f4
+          gist_title: github.com - GitHub Quick Import
+          gist_description: Tampermonkey UserScript - Adds an Import button on GitHub repos and pre-fills the import flow.
+          github_file: github.com/github.com.user.js
+      - uses: popsiclestick/gist-sync-action@v1.2.0
+        id: sync-14
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gist_url: https://gist.github.com/BenjiThatFoxGuy/f5e54f2cc96bb8cdd61d4d4c234031f4
+          gist_title: github.com - GitHub Quick Import
+          gist_description: Tampermonkey UserScript - Adds an Import button on GitHub repos and pre-fills the import flow.
+          github_file: github.com/github.com.meta.js

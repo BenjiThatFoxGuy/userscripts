@@ -9,11 +9,11 @@ These scripts might change at any time. Sites break, I fix (or break) things, an
 
 ## ![�️‍🗨️](https://static-cdn.jtvnw.net/emoticons/v2/emotesv2_20c7bda61faa4e07b6a7d523d2bc9172/animated/light/1.0) No Guarantees (Except Not Malware)
 
-I test everything, but there are no promises here except that I’m not shipping malware. (Still, check the code yourself!) I make these for myself, but I hope they help you too. If something breaks or you have an idea, open an issue and I’ll see what I can do.
+I test everything, but there are no promises here except that I'm not shipping malware. (Still, check the code yourself!) I make these for myself, but I hope they help you too. If something breaks or you have an idea, open an issue and I'll see what I can do.
 
 # 🌐 vrcw.net → VRCX Deeplink: Less Clicking, More Exploring
 
-Turns those ugly `wrld_` world IDs on vrcw.net into shiny, clickable VRCX deep links. No more copy-paste, no more "where's that world again?"—just click and go.
+Turns those ugly `wrld_` world IDs on vrcw.net into shiny, clickable VRCX deep links. No more copy-paste, no more "where's that world again?" - just click and go.
 
 ---
 
