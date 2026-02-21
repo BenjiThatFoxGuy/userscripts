@@ -16,7 +16,7 @@ on:
 jobs:
   gist-sync:
     name: gist-sync
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
