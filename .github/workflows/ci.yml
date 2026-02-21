@@ -174,7 +174,7 @@ jobs:
           auth: ${{ secrets.GIST_TOKEN }}
           gist_url: https://gist.github.com/BenjiThatFoxGuy/22be2e2bf8b0ac8f5340fcaa43e63cdf
           gist_title: twitchemotes.com - Unblock Right Click on Images
-          gist_description: Tampermonkey UserScript - Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this—just respect the owners. Popup begone!
+          gist_description: Tampermonkey UserScript - Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this-just respect the owners. Popup begone!
           github_file: twitchemotes.com/twitchemotes.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
         continue-on-error: true
@@ -183,7 +183,7 @@ jobs:
           auth: ${{ secrets.GIST_TOKEN }}
           gist_url: https://gist.github.com/BenjiThatFoxGuy/22be2e2bf8b0ac8f5340fcaa43e63cdf
           gist_title: twitchemotes.com - Unblock Right Click on Images
-          gist_description: Tampermonkey UserScript - Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this—just respect the owners. Popup begone!
+          gist_description: Tampermonkey UserScript - Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this-just respect the owners. Popup begone!
           github_file: twitchemotes.com/twitchemotes.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
         continue-on-error: true
