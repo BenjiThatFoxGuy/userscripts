@@ -16,7 +16,7 @@ on:
 jobs:
   gist-sync:
     name: gist-sync
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -60,6 +60,7 @@ jobs:
               https://updates.benjifox.gay/github.com.user.js
               https://updates.benjifox.gay/github.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -68,6 +69,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Automatically redirect from Twitter/X to Nitter, automatically choosing a Nitter instance based on which one has the current post/user available.
           github_file: nitter-redirect/nitter-redirect.user.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-2
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -76,6 +78,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Automatically redirect from Twitter/X to Nitter, automatically choosing a Nitter instance based on which one has the current post/user available.
           github_file: nitter-redirect/nitter-redirect.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-xcancel
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -84,6 +87,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Automatically redirect from Twitter/X to xCancel (xcancel.com) - a fixed, reliable alternative to Twitter.
           github_file: xcancel-redirect/xcancel-redirect.user.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-xcancel-2
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -92,6 +96,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Automatically redirect from Twitter/X to xCancel (xcancel.com) - a fixed, reliable alternative to Twitter.
           github_file: xcancel-redirect/xcancel-redirect.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-3
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -100,6 +105,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Converts VRChat world IDs to VRCX deeplinks on vrcw.net
           github_file: vrcw.net/vrcw.net.user.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-4
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -108,6 +114,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Converts VRChat world IDs to VRCX deeplinks on vrcw.net
           github_file: vrcw.net/vrcw.net.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-5
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -116,6 +123,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Automatically clicks the "Slow Download" button on Nexus Mods download pages.
           github_file: nexusmods.com/nexusmods.com.user.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-6
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -124,6 +132,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Automatically clicks the "Slow Download" button on Nexus Mods download pages.
           github_file: nexusmods.com/nexusmods.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-7
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -132,6 +141,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Restore deleted e621/e926 posts from archive if available
           github_file: e621.net/e621.net.user.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-8
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -140,6 +150,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Restore deleted e621/e926 posts from archive if available
           github_file: e621.net/e621.net.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-9
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -148,6 +159,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Removes list=WL from video links on your Watch Later playlist page so videos open solo and can be ticked off.
           github_file: youtube.com/youtube.com.user.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-10
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -156,6 +168,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Removes list=WL from video links on your Watch Later playlist page so videos open solo and can be ticked off.
           github_file: youtube.com/youtube.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-11
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -164,6 +177,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this—just respect the owners. Popup begone!
           github_file: twitchemotes.com/twitchemotes.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-12
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -172,6 +186,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Unblocks right-click on emote and badge images. If they'd just give us a "don't show again" option, we wouldn't need this—just respect the owners. Popup begone!
           github_file: twitchemotes.com/twitchemotes.com.meta.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-13
         with:
           auth: ${{ secrets.GIST_TOKEN }}
@@ -180,6 +195,7 @@ jobs:
           gist_description: Tampermonkey UserScript - Adds an Import button on GitHub repos and pre-fills the import flow.
           github_file: github.com/github.com.user.js
       - uses: popsiclestick/gist-sync-action@v1.2.0
+        continue-on-error: true
         id: sync-14
         with:
           auth: ${{ secrets.GIST_TOKEN }}
